@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="header">
+        <nav id="navbar">
+            <img src="images/logo.png" class="logo" alt="">
+            <ul id="menu">
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>SERVICE</li>
+                <li>PRODUCT</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
+    </div> 
+    <p class="text">
+        Line 29 (Fig. 14.23) creates JList object colorJList. The argument to the JList
+constructor is the array of Objects (in this case Strings) to display in the list. Line 30 uses
+JList method setVisibleRowCount to determine the number of items visible in the list.
+Line 33 uses JList method setSelectionMode to specify the list’s selection mode.
+Class ListSelectionModel (of package javax.swing) declares three constants that specify
+a JList’s selection mode—SINGLE_SELECTION (which allows only one item to be selected
+at a time), SINGLE_INTERVAL_SELECTION (for a multiple-selection list that allows selection
+of several contiguous items) and MULTIPLE_INTERVAL_SELECTION (for a multiple-selection
+list that does not restrict the items that can be selected).
+Unlike a JComboBox, a JList does not provide a scrollbar if there are more items in the
+list than the number of visible rows. In this case, a JScrollPane object is used to provide
+the scrolling capability. Line 36 adds a new instance of class JScrollPane to the JFrame.
+The JScrollPane constructor receives as its argument the JComponent that needs scrolling
+functionality (in this case, colorJList). Notice in the screen captures that a scrollbar created by the JScrollPane appears at the right side of the JList. By default, the scrollbar
+appears only when the number of items in the JList exceeds the number of visible items.
+Lines 38–48 use JList method addListSelectionListener to register an object that
+implements ListSelectionListener (package javax.swing.event) as the listener for the
+JList’s selection events. Once again, we use an instance of an anonymous inner class (lines
+39–47) as the listener. In this example, when the user makes a selection from colorJList,
+method valueChanged (line 42–46) should change the background color of the ListFrame to the selected color. This is accomplished in lines 44–45. Note the use of JFrame
+method getContentPane in line 44. Each JFrame actually consists of three layers—the
+background, the content pane and the glass pane. The content pane appears in front of the
+background and is where the GUI components in the JFrame are displayed. The glass pane
+is used to display tool tips and other items that should appear in front of the GUI components on the screen. The content pane completely hides the background of the JFrame;
+thus, to change the background color behind the GUI components, you must change the
+content pane’s background color. Method getContentPane returns a reference to the
+JFrame’s content pane (an object of class Container). In line 44, we then use that reference
+to call method setBackground, which sets the content pane’s background color to an element in the colors array. The color is selected from the array by using the selected item’s
+index. JList method getSelectedIndex returns the selected item’s index. As with arrays
+and JComboBoxes, JList indexing is zero based.
+    </p>
+    <p class="text">
+        Line 29 (Fig. 14.23) creates JList object colorJList. The argument to the JList
+constructor is the array of Objects (in this case Strings) to display in the list. Line 30 uses
+JList method setVisibleRowCount to determine the number of items visible in the list.
+Line 33 uses JList method setSelectionMode to specify the list’s selection mode.
+Class ListSelectionModel (of package javax.swing) declares three constants that specify
+a JList’s selection mode—SINGLE_SELECTION (which allows only one item to be selected
+at a time), SINGLE_INTERVAL_SELECTION (for a multiple-selection list that allows selection
+of several contiguous items) and MULTIPLE_INTERVAL_SELECTION (for a multiple-selection
+list that does not restrict the items that can be selected).
+Unlike a JComboBox, a JList does not provide a scrollbar if there are more items in the
+list than the number of visible rows. In this case, a JScrollPane object is used to provide
+the scrolling capability. Line 36 adds a new instance of class JScrollPane to the JFrame.
+The JScrollPane constructor receives as its argument the JComponent that needs scrolling
+functionality (in this case, colorJList). Notice in the screen captures that a scrollbar created by the JScrollPane appears at the right side of the JList. By default, the scrollbar
+appears only when the number of items in the JList exceeds the number of visible items.
+Lines 38–48 use JList method addListSelectionListener to register an object that
+implements ListSelectionListener (package javax.swing.event) as the listener for the
+JList’s selection events. Once again, we use an instance of an anonymous inner class (lines
+39–47) as the listener. In this example, when the user makes a selection from colorJList,
+method valueChanged (line 42–46) should change the background color of the ListFrame to the selected color. This is accomplished in lines 44–45. Note the use of JFrame
+method getContentPane in line 44. Each JFrame actually consists of three layers—the
+background, the content pane and the glass pane. The content pane appears in front of the
+background and is where the GUI components in the JFrame are displayed. The glass pane
+is used to display tool tips and other items that should appear in front of the GUI components on the screen. The content pane completely hides the background of the JFrame;
+thus, to change the background color behind the GUI components, you must change the
+content pane’s background color. Method getContentPane returns a reference to the
+JFrame’s content pane (an object of class Container). In line 44, we then use that reference
+to call method setBackground, which sets the content pane’s background color to an element in the colors array. The color is selected from the array by using the selected item’s
+index. JList method getSelectedIndex returns the selected item’s index. As with arrays
+and JComboBoxes, JList indexing is zero based.
+    </p>
+    <p class="text">
+        Line 29 (Fig. 14.23) creates JList object colorJList. The argument to the JList
+constructor is the array of Objects (in this case Strings) to display in the list. Line 30 uses
+JList method setVisibleRowCount to determine the number of items visible in the list.
+Line 33 uses JList method setSelectionMode to specify the list’s selection mode.
+Class ListSelectionModel (of package javax.swing) declares three constants that specify
+a JList’s selection mode—SINGLE_SELECTION (which allows only one item to be selected
+at a time), SINGLE_INTERVAL_SELECTION (for a multiple-selection list that allows selection
+of several contiguous items) and MULTIPLE_INTERVAL_SELECTION (for a multiple-selection
+list that does not restrict the items that can be selected).
+Unlike a JComboBox, a JList does not provide a scrollbar if there are more items in the
+list than the number of visible rows. In this case, a JScrollPane object is used to provide
+the scrolling capability. Line 36 adds a new instance of class JScrollPane to the JFrame.
+The JScrollPane constructor receives as its argument the JComponent that needs scrolling
+functionality (in this case, colorJList). Notice in the screen captures that a scrollbar created by the JScrollPane appears at the right side of the JList. By default, the scrollbar
+appears only when the number of items in the JList exceeds the number of visible items.
+Lines 38–48 use JList method addListSelectionListener to register an object that
+implements ListSelectionListener (package javax.swing.event) as the listener for the
+JList’s selection events. Once again, we use an instance of an anonymous inner class (lines
+39–47) as the listener. In this example, when the user makes a selection from colorJList,
+method valueChanged (line 42–46) should change the background color of the ListFrame to the selected color. This is accomplished in lines 44–45. Note the use of JFrame
+method getContentPane in line 44. Each JFrame actually consists of three layers—the
+background, the content pane and the glass pane. The content pane appears in front of the
+background and is where the GUI components in the JFrame are displayed. The glass pane
+is used to display tool tips and other items that should appear in front of the GUI components on the screen. The content pane completely hides the background of the JFrame;
+thus, to change the background color behind the GUI components, you must change the
+content pane’s background color. Method getContentPane returns a reference to the
+JFrame’s content pane (an object of class Container). In line 44, we then use that reference
+to call method setBackground, which sets the content pane’s background color to an element in the colors array. The color is selected from the array by using the selected item’s
+index. JList method getSelectedIndex returns the selected item’s index. As with arrays
+and JComboBoxes, JList indexing is zero based.
+    </p>
+    <p class="text">
+        Line 29 (Fig. 14.23) creates JList object colorJList. The argument to the JList
+constructor is the array of Objects (in this case Strings) to display in the list. Line 30 uses
+JList method setVisibleRowCount to determine the number of items visible in the list.
+Line 33 uses JList method setSelectionMode to specify the list’s selection mode.
+Class ListSelectionModel (of package javax.swing) declares three constants that specify
+a JList’s selection mode—SINGLE_SELECTION (which allows only one item to be selected
+at a time), SINGLE_INTERVAL_SELECTION (for a multiple-selection list that allows selection
+of several contiguous items) and MULTIPLE_INTERVAL_SELECTION (for a multiple-selection
+list that does not restrict the items that can be selected).
+Unlike a JComboBox, a JList does not provide a scrollbar if there are more items in the
+list than the number of visible rows. In this case, a JScrollPane object is used to provide
+the scrolling capability. Line 36 adds a new instance of class JScrollPane to the JFrame.
+The JScrollPane constructor receives as its argument the JComponent that needs scrolling
+functionality (in this case, colorJList). Notice in the screen captures that a scrollbar created by the JScrollPane appears at the right side of the JList. By default, the scrollbar
+appears only when the number of items in the JList exceeds the number of visible items.
+Lines 38–48 use JList method addListSelectionListener to register an object that
+implements ListSelectionListener (package javax.swing.event) as the listener for the
+JList’s selection events. Once again, we use an instance of an anonymous inner class (lines
+39–47) as the listener. In this example, when the user makes a selection from colorJList,
+method valueChanged (line 42–46) should change the background color of the ListFrame to the selected color. This is accomplished in lines 44–45. Note the use of JFrame
+method getContentPane in line 44. Each JFrame actually consists of three layers—the
+background, the content pane and the glass pane. The content pane appears in front of the
+background and is where the GUI components in the JFrame are displayed. The glass pane
+is used to display tool tips and other items that should appear in front of the GUI components on the screen. The content pane completely hides the background of the JFrame;
+thus, to change the background color behind the GUI components, you must change the
+content pane’s background color. Method getContentPane returns a reference to the
+JFrame’s content pane (an object of class Container). In line 44, we then use that reference
+to call method setBackground, which sets the content pane’s background color to an element in the colors array. The color is selected from the array by using the selected item’s
+index. JList method getSelectedIndex returns the selected item’s index. As with arrays
+and JComboBoxes, JList indexing is zero based.
+    </p>
+    <script src="script/script.js"></script>
+</body>
+</html>
